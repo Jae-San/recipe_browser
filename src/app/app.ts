@@ -5,11 +5,12 @@ import { RecipeCard } from './recipe-card/recipe-card';
 import { MealPlanner } from './meal-planner/meal-planner';
 import { SearchBar } from './search-bar/search-bar';
 import { AuthBar } from './auth-bar/auth-bar';
+import { Categories } from './categories/categories';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Sidebar, RecipeList, RecipeCard, MealPlanner, SearchBar, AuthBar],
+  imports: [Sidebar, RecipeList, RecipeCard, MealPlanner, SearchBar, AuthBar, Categories],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
