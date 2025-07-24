@@ -1,0 +1,9 @@
+<div style="display: flex; align-items: center; gap: 1rem;">
+  <ng-container *ngIf="auth.isLoggedIn(); else notConnected">
+    <span style="font-weight: 500; color: #232837;">👤 {{ auth.username() }}</span>
+    <button (click)="logout()" style="background: #f44336; color: #fff; border: none; border-radius: 8px; padding: 0.4rem 1rem; font-weight: 500; cursor: pointer;">Se déconnecter</button>
+  </ng-container>
+  <ng-template #notConnected>
+    <button [routerLink]="['/auth']" style="background: #232837; color: #fff; border: none; border-radius: 8px; padding: 0.4rem 1rem; font-weight: 500; cursor: pointer;">Se connecter</button>
+  </ng-template>
+</div>
