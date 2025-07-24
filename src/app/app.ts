@@ -1,9 +1,15 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Sidebar } from './sidebar/sidebar';
+import { RecipeList } from './recipe-list/recipe-list';
+import { RecipeCard } from './recipe-card/recipe-card';
+import { MealPlanner } from './meal-planner/meal-planner';
+import { SearchBar } from './search-bar/search-bar';
+import { AuthBar } from './auth-bar/auth-bar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [Sidebar, RecipeList, RecipeCard, MealPlanner, SearchBar, AuthBar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

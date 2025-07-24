@@ -1,0 +1,32 @@
+<section style="background: #fff; border-radius: 18px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 2rem 1.5rem; min-width: 320px;">
+  <h3 style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1.5rem;">Weekly Meal Planner</h3>
+  <ng-container *ngIf="auth.isLoggedIn(); else notConnected">
+    <div style="margin-bottom: 1.2rem; color: #888; font-size: 0.95rem;">Selected recipes</div>
+    <div style="display: flex; gap: 0.5rem; margin-bottom: 1.2rem;">
+      <span style="font-weight: 500;">Monday</span>
+      <span style="color: #bbb;">Lunch</span>
+      <span style="margin-left: auto; color: #bbb;">19</span>
+      <span style="color: #bbb;">13</span>
+      <span style="color: #bbb;">31</span>
+    </div>
+    <div style="background: #f2f4fa; border-radius: 10px; padding: 0.7rem 1rem; margin-bottom: 0.7rem; font-weight: 500;">Breakfast</div>
+    <div style="background: #f9fafc; border-radius: 10px; padding: 0.7rem 1rem; margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.7rem;">
+      <div style="width: 36px; height: 36px; background: #eee; border-radius: 8px;"></div>
+      <span>Spicy Peanut Noodles</span>
+    </div>
+    <div style="background: #f9fafc; border-radius: 10px; padding: 0.7rem 1rem; margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.7rem;">
+      <div style="width: 36px; height: 36px; background: #eee; border-radius: 8px;"></div>
+      <span>Quase Meeb nglwar</span>
+    </div>
+    <div style="background: #f9fafc; border-radius: 10px; padding: 0.7rem 1rem; margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.7rem;">
+      <div style="width: 36px; height: 36px; background: #eee; border-radius: 8px;"></div>
+      <span>Spicy Peanut Noodles</span>
+    </div>
+    <button style="margin-top: 1.5rem; width: 100%; background: #232837; color: #fff; border: none; border-radius: 8px; padding: 0.8rem 0; font-weight: 600; font-size: 1rem; cursor: pointer;">Shopping List</button>
+  </ng-container>
+  <ng-template #notConnected>
+    <div style="color: #bbb; text-align: center; padding: 2rem 0; font-size: 1.1rem;">
+      Connectez-vous pour ajouter des plats à votre planificateur de repas !
+    </div>
+  </ng-template>
+</section>
